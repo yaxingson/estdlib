@@ -1,0 +1,32 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "name": "estdlib",
+  "entryPoints": [
+    "./lib/array/index.ts",
+    "./lib/assert/index.ts",
+    "./lib/date/index.ts",
+    "./lib/math/index.ts",
+    "./lib/object/index.ts"
+  ],
+  "readme":"none",
+  "includes":["./lib/**/*.ts"],
+  "exclude":["./lib/**/*.spec.ts", "node_modules/*"],
+  "includeVersion":true,
+  "disableSources":true,
+  "sort": ["source-order"],
+  "categorizeByGroup": false,
+  "searchCategoryBoosts": {
+    "Component": 2,
+    "Model": 1.2
+  },
+  "searchGroupBoosts": {
+    "Classes": 1.5
+  },
+  "navigationLinks": {
+    "GitHub": "https://github.com/yaxingson/estdlib"
+  },
+  "sidebarLinks": {
+    
+  },
+  "out":"docs"
+}

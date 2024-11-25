@@ -1,0 +1,7 @@
+*.log
+*.idea
+*.swp
+coverage
+docs/**/*.html
+dist
+node_modules

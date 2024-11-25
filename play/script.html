@@ -1,0 +1,18 @@
+<!-- global  -->
+<script src="./node_modules/estdlib/dist/estdlib.js"></script>
+<script>
+  console.log(window.estdlib)
+
+
+</script>
+
+<!-- esm -->
+<script type="module">
+  import * as estdlib from './node_modules/estdlib/dist/estdlib.mjs'
+  import * as array from './node_modules/estdlib/dist/array'
+
+  console.log(estdlib)
+  console.log(array)
+
+</script>
+
