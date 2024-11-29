@@ -1,0 +1,5 @@
+export { default as each } from './each'
+export { default as filter } from './filter'
+export { default as find } from './find'
+export { default as map } from './map'
+export { default as reduce } from './reduce'

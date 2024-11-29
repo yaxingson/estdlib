@@ -1,0 +1,37 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "name": "estdlib",
+  "entryPoints": [
+    "./lib/array/index.ts",
+    "./lib/assert/index.ts",
+    "./lib/date/index.ts",
+    "./lib/math/index.ts",
+    "./lib/object/index.ts",
+    "./lib/string/index.ts",
+    "./lib/function/index.ts",
+    "./lib/collection/index.ts",
+    "./lib/error/index.ts",
+    "./lib/utility/index.ts"
+  ],
+  "out":"docs",
+  "entryPointStrategy": "resolve",
+  "readme":"none",
+  "includes":[],
+  "exclude":[],
+  "includeVersion":true,
+  "disableSources":true,
+  "sort": ["source-order"],
+  "categorizeByGroup": false,
+  "searchCategoryBoosts": {},
+  "searchGroupBoosts": {},
+  "navigationLinks": {
+    "GitHub": "https://github.com/yaxingson/estdlib"
+  },
+  "sidebarLinks": {
+    "x":"https://www.baiud.com"
+  },
+  "compilerOptions":{},
+  "plugin":["typedoc-material-theme"],
+  "themeColor": "#f6f6f7",
+  "tsconfig":"./tsconfig.json"
+}
