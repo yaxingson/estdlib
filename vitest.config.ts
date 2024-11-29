@@ -6,19 +6,24 @@ export default defineConfig({
     name: pkg.name,
     environment: 'jsdom',
     include: ['lib/**/*.spec.ts'],
-    exclude: ['lib/**/index.ts'],
     watch: false,
     coverage: {
-      enabled: true,
       provider: 'istanbul',
-      reporter: ['html', 'json'],
+      reporter: 'html',
       include: ['lib/**/*'],
-      exclude: ['lib/**/*.spec.ts'],
+      exclude: ['lib/**/*.spec.ts', 'lib/**/index.ts'],
       reportOnFailure: true
     },
-    deps: {},
     benchmark: {
-      include: ['./benchmarks/**/*.bench.ts']
+      include: ['perf/benchmarks/**/*.bench.ts']
+    },
+    deps: {
+      optimizer: {
+        ssr: {
+          enabled: true,
+          include: ['estdlib']
+        }
+      }
     }
   }
 })

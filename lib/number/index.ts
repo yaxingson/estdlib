@@ -1,0 +1,5 @@
+export { default as inRange } from './inRange'
+export { default as mean } from './mean'
+export { default as random } from './random'
+export { default as randomInt } from './randomInt'
+export { default as round } from './round'

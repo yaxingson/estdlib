@@ -32,10 +32,6 @@ const licensePlugin = license({
 
 const absolute = path => resolve(__dirname, path)
 
-/**
- *
- * @param moduleName
- */
 function buildModuleOptions(moduleName) {
   return {
     input: absolute(`lib/${moduleName}/index.ts`),
@@ -54,10 +50,6 @@ function buildModuleOptions(moduleName) {
   }
 }
 
-/**
- *
- * @param moduleName
- */
 function buildModuleDeclarationOptions(moduleName) {
   return {
     input: absolute(`lib/${moduleName}/index.ts`),
@@ -71,9 +63,6 @@ function buildModuleDeclarationOptions(moduleName) {
   }
 }
 
-/**
- *
- */
 function buildLibOptions() {
   return {
     input: 'index.ts',
@@ -85,11 +74,7 @@ function buildLibOptions() {
       },
       {
         file: absolute('dist/index.cjs'),
-        format: 'cjs',
-        generatedCode: {
-          constBindings: true
-        },
-        preserveModules: false
+        format: 'cjs'
       },
       {
         file: absolute('dist/estdlib.js'),
@@ -112,17 +97,13 @@ function buildLibOptions() {
       },
       {
         file: absolute('dist/estdlib.esm.js'),
-        format: 'esm',
-        preserveModules: false
+        format: 'esm'
       }
     ],
     plugins: [tsPlugin]
   }
 }
 
-/**
- *
- */
 function buildLibDeclarationOptions() {
   return {
     input: 'index.ts',
