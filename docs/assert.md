@@ -11,3 +11,6 @@
 - [isBuffer](../wiki/assert.Function.isBuffer)
 - [isDate](../wiki/assert.Function.isDate)
 - [isError](../wiki/assert.Function.isError)
+- [isNaN](../wiki/assert.Function.isNaN)
+- [isNull](../wiki/assert.Function.isNull)
+- [isUndefined](../wiki/assert.Function.isUndefined)
