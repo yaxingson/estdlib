@@ -14,7 +14,7 @@
     "./lib/utility/index.ts"
   ],
   "out":"docs",
-  "entryPointStrategy": "resolve",
+  "entryPointStrategy": "expand",
   "readme":"none",
   "exclude":[],
   "includeVersion":true,
