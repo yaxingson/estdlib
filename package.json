@@ -3,6 +3,7 @@
   "version": "0.1.2",
   "author": "yaxingson <3228891558@qq.com>",
   "description": "a ecmascript standard library",
+  "packageManager":"pnpm@",
   "keywords": [
     "util",
     "functional",
