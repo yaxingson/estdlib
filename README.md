@@ -15,6 +15,7 @@
 The estdlib is a standard library for the browser and node.js built on modern ecmascript.
 
 ![](https://img.shields.io/bundlephobia/minzip/estdlib?label=minzipped)
+![](https://codecov.io/gh/toss/estdlib/graph/badge.svg?token=8N5S3AR3C7)
 ![](https://img.shields.io/npm/dm/estdlib.svg)
 ![](https://img.shields.io/npm/v/estdlib.svg)
 ![](https://img.shields.io/npm/l/estdlib.svg)
@@ -23,6 +24,7 @@ The estdlib is a standard library for the browser and node.js built on modern ec
 
 - 💪 Type strong, write in typescript
 - 📦 Use native ESM to achieve a smaller packaging volume
+- 🚀 Excellent performance
 
 ## Get Started
 
@@ -82,4 +84,6 @@ const { isArray, isBoolean } = require('estdlib/assert')
 
 ## Support
 
-Estdlib is released under the MIT license & supports modern environments.
+Tested in Chrome 74-75, Firefox 66-67, IE 11, Edge 18, Safari 11-12, & Node.js 8-12. 
+
+Automated [browser]() & [CI]() test runs are available.
