@@ -14,9 +14,14 @@
 
 The estdlib is a standard library for the browser and node.js built on modern ecmascript.
 
+![](https://img.shields.io/bundlephobia/minzip/estdlib?label=minzipped)
+![](https://img.shields.io/npm/dm/estdlib.svg)
+![](https://img.shields.io/npm/v/estdlib.svg)
+![](https://img.shields.io/npm/l/estdlib.svg)
+
 ## Features
 
-- 💪 Write in typescript
+- 💪 Type strong, write in typescript
 - 📦 Use native ESM to achieve a smaller packaging volume
 
 ## Get Started
@@ -37,7 +42,7 @@ pnpm add estdlib
 1. `esm`
 
 ```js
-import * as estdlib from 'estdlib'
+import * as _ from 'estdlib'
 import { first, isBoolean, add } from 'estdlib'
 
 import * as assert from 'estdlib/assert'
@@ -62,11 +67,13 @@ const { isArray, isBoolean } = require('estdlib/assert')
 <!-- <script src="https://unpkg.com/estdlib@latest/dist/estdlib.min.js"></script> -->
 <script src="https://unpkg.com/estdlib@latest/dist/estdlib.js"></script>
 <script type="module">
-  import * as estdlib from 'https://unpkg.com/estdlib@latest/dist/estdlib.esm.js'
+  import * as _ from 'https://unpkg.com/estdlib@latest/dist/estdlib.esm.js'
 
 </script>
 
 ```
+
+> See the full documentation [here](https://github.com/yaxingson/estdlib/wiki)
 
 ### Download
 
