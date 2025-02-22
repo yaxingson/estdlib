@@ -4,7 +4,7 @@
  * @since 0.1.2
  * @see {@link https://github.com/yaxingson/estdlib/blob/main/lib/array/chunk.ts source}
  *
- * @typeParam T - Type of objects the array contains
+ * @typeParam T
  *
  * @param array - The array to process
  * @param size - The length of each chunk
@@ -21,6 +21,8 @@
  *
  * ```
  */
-export default function chunk<T>(array: T[], size = 1) {
-  return []
+import { NotImplementedError } from '../_internal'
+
+export default function chunk<T>(array: T[], size = 1): T[][] {
+  throw NotImplementedError
 }

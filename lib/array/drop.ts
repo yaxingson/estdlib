@@ -4,7 +4,7 @@
  * @since 0.1.2
  * @see {@link https://github.com/yaxingson/estdlib/blob/main/lib/array/drop.ts source}
  *
- * @typeParam T - Type of objects the array contains
+ * @typeParam T
  *
  * @param array - The array to query
  * @param n - The number of elements to drop

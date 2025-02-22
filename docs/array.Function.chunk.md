@@ -2,7 +2,7 @@
 
 # Function: chunk()
 
-> **chunk**\<`T`\>(`array`, `size`): `never`[]
+> **chunk**\<`T`\>(`array`, `size`): `void`
 
 Creates an array of elements split into groups the length of size
 
@@ -10,11 +10,9 @@ Creates an array of elements split into groups the length of size
 
 • **T**
 
-Type of objects the array contains
-
 ## Parameters
 
-• **array**: `T`[]
+• **array**: `unknown`[]
 
 The array to process
 
@@ -24,7 +22,7 @@ The length of each chunk
 
 ## Returns
 
-`never`[]
+`void`
 
 - Returns the new array of chunks
 

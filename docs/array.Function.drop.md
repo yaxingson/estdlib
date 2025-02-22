@@ -2,19 +2,13 @@
 
 # Function: drop()
 
-> **drop**\<`T`\>(`array`, `n`): `void`
+> **drop**(`array`, `n`): `void`
 
 Creates a slice of array with n elements dropped from the beginning
 
-## Type Parameters
-
-• **T**
-
-Type of objects the array contains
-
 ## Parameters
 
-• **array**: `T`[]
+• **array**: `unknown`[]
 
 The array to query
 

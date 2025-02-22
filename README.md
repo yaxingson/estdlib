@@ -14,10 +14,17 @@
 
 The estdlib is a standard library for the browser and node.js built on modern ecmascript.
 
+![](https://img.shields.io/bundlephobia/minzip/estdlib?label=minzipped)
+![](https://codecov.io/gh/toss/estdlib/graph/badge.svg?token=8N5S3AR3C7)
+![](https://img.shields.io/npm/dm/estdlib.svg)
+![](https://img.shields.io/npm/v/estdlib.svg)
+![](https://img.shields.io/npm/l/estdlib.svg)
+
 ## Features
 
-- 💪 Write in typescript
+- 💪 Type strong, write in typescript
 - 📦 Use native ESM to achieve a smaller packaging volume
+- 🚀 Excellent performance
 
 ## Get Started
 
@@ -37,7 +44,7 @@ pnpm add estdlib
 1. `esm`
 
 ```js
-import * as estdlib from 'estdlib'
+import * as _ from 'estdlib'
 import { first, isBoolean, add } from 'estdlib'
 
 import * as assert from 'estdlib/assert'
@@ -62,11 +69,13 @@ const { isArray, isBoolean } = require('estdlib/assert')
 <!-- <script src="https://unpkg.com/estdlib@latest/dist/estdlib.min.js"></script> -->
 <script src="https://unpkg.com/estdlib@latest/dist/estdlib.js"></script>
 <script type="module">
-  import * as estdlib from 'https://unpkg.com/estdlib@latest/dist/estdlib.esm.js'
+  import * as _ from 'https://unpkg.com/estdlib@latest/dist/estdlib.esm.js'
 
 </script>
 
 ```
+
+> See the full documentation [here](https://github.com/yaxingson/estdlib/wiki)
 
 ### Download
 
@@ -75,4 +84,6 @@ const { isArray, isBoolean } = require('estdlib/assert')
 
 ## Support
 
-Estdlib is released under the MIT license & supports modern environments.
+Tested in Chrome 74-75, Firefox 66-67, IE 11, Edge 18, Safari 11-12, & Node.js 8-12.
+
+Automated [browser]() & [CI]() test runs are available.

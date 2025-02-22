@@ -2,7 +2,7 @@
 
 # Function: isUndefined()
 
-> **isUndefined**(`value`): `void`
+> **isUndefined**(`value`): `boolean`
 
 Checks if value is undefined
 
@@ -14,7 +14,7 @@ The value to check
 
 ## Returns
 
-`void`
+`boolean`
 
 - Returns true if value is undefined, else false
 

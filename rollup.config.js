@@ -7,16 +7,19 @@ import terser from '@rollup/plugin-terser'
 import typescript from '@rollup/plugin-typescript'
 import license from 'rollup-plugin-license'
 import dts from 'rollup-plugin-dts'
+import externals from 'rollup-plugin-node-externals'
+
+const absolute = path => resolve(__dirname, path)
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
-
 const pkg = createRequire(import.meta.url)('./package.json')
-const modules = await readdir(resolve(__dirname, 'lib'))
+const modules = (await readdir(resolve(__dirname, 'lib'))).filter(m => !m.startsWith('_'))
 
 const tsPlugin = typescript({
   removeComments: true,
   noEmitOnError: true,
-  declaration: false
+  declaration: false,
+  exclude: []
 })
 
 const licensePlugin = license({
@@ -30,11 +33,39 @@ const licensePlugin = license({
   }
 })
 
-const absolute = path => resolve(__dirname, path)
+/**
+ * @typedef {{minimize:boolean, emitDeclare:boolean}} Config
+ * @param {string} entry
+ * @param {string[]} formats
+ * @param {Config} config
+ * @returns {import('rollup').RollupOptions}
+ */
+function buildRollupOptions(entry, formats, config = {}) {
+  const { minimize, emitDeclare } = config
+
+  /**@type {(format:string)=>string} */
+  const getOutputPath = format => {}
+
+  return {
+    input: entry,
+    output: formats.map(format => ({
+      file: absolute(getOutputPath(format)),
+      format,
+      sourcemap: format === 'esm',
+      generatedCode: {
+        constBindings: true
+      },
+      preserveModules: false,
+      strict: true,
+      plugins: []
+    })),
+    plugins: [externals(), emitDeclare ? dts() : tsPlugin]
+  }
+}
 
 function buildModuleOptions(moduleName) {
   return {
-    input: absolute(`lib/${moduleName}/index.ts`),
+    input: `lib/${moduleName}/index.ts`,
     output: [
       {
         file: absolute(`dist/${moduleName}/index.js`),
@@ -52,7 +83,7 @@ function buildModuleOptions(moduleName) {
 
 function buildModuleDeclarationOptions(moduleName) {
   return {
-    input: absolute(`lib/${moduleName}/index.ts`),
+    input: `lib/${moduleName}/index.ts`,
     output: [
       {
         file: absolute(`dist/${moduleName}/index.d.ts`),
@@ -74,7 +105,12 @@ function buildLibOptions() {
       },
       {
         file: absolute('dist/index.cjs'),
-        format: 'cjs'
+        format: 'cjs',
+        generatedCode: {
+          constBindings: true
+        },
+        preserveModules: false,
+        strict: true
       },
       {
         file: absolute('dist/estdlib.js'),
@@ -100,7 +136,7 @@ function buildLibOptions() {
         format: 'esm'
       }
     ],
-    plugins: [tsPlugin]
+    plugins: [externals(), tsPlugin]
   }
 }
 
@@ -111,13 +147,10 @@ function buildLibDeclarationOptions() {
       file: absolute('dist/index.d.ts'),
       format: 'esm'
     },
-    plugins: [dts()]
+    plugins: [externals(), dts()]
   }
 }
 
-export default defineConfig([
-  ...modules.map(moduleName => buildModuleOptions(moduleName)),
-  ...modules.map(moduleName => buildModuleDeclarationOptions(moduleName)),
-  buildLibOptions(),
-  buildLibDeclarationOptions()
-])
+export default defineConfig(() => {
+  return []
+})

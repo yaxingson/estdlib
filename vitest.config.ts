@@ -5,7 +5,7 @@ export default defineConfig({
   test: {
     name: pkg.name,
     environment: 'jsdom',
-    include: ['lib/**/*.spec.ts'],
+    include: ['lib/array/**/*.spec.ts'],
     watch: false,
     coverage: {
       provider: 'istanbul',

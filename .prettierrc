@@ -2,12 +2,18 @@
   "printWidth":100,
   "tabWidth":2,
   "singleQuote":true,
-  "trailingComma":"none",
+  "trailingComma":"es5",
   "semi":false,
   "bracketSpacing":true,
   "arrowParens": "avoid",
   "bracketSameLine": false,
   "endOfLine": "lf",
   "quoteProps": "as-needed",
-  "singleAttributePerLine": true
+  "singleAttributePerLine": true,
+  "proseWrap": "preserve",
+  "plugins":["@trivago/prettier-plugin-sort-imports"],
+  "importOrder": ["^vitest", "<THIRD_PARTY_MODULES>", "^@(.*)$", "^[.]/", "^[.]{2,}/"],
+  "importOrderSortSpecifiers": true,
+  "importOrderCaseInsensitive": true,
+  "overrides": []
 }

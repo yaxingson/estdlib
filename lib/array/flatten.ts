@@ -24,4 +24,4 @@
  *
  * ```
  */
-export default function flatten(array: unknown[], depth = 1) {}
+export default function flatten<T>(array: T[], depth = 1) {}

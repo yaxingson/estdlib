@@ -16,4 +16,6 @@
  *
  * ```
  */
-export default function isNull(value: unknown) {}
+export default function isNull(value: unknown) {
+  return value === null
+}

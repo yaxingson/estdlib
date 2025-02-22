@@ -4,6 +4,8 @@
  * @since 0.1.2
  * @see {@link https://github.com/yaxingson/estdlib/blob/main/lib/array/compact.ts source}
  *
+ * @typeParam T
+ *
  * @param array - The array to compact
  * @returns - Returns the new array of filtered values
  *
@@ -15,4 +17,10 @@
  *
  * ```
  */
-export default function compact(array: unknown[]) {}
+import { NotImplementedError } from '../_internal'
+
+export default function compact<T>(
+  array: T[]
+): Exclude<T, false | null | 0 | 0n | '' | undefined>[] {
+  throw NotImplementedError
+}

@@ -2,7 +2,7 @@
 
 # Function: isNull()
 
-> **isNull**(`value`): `void`
+> **isNull**(`value`): `boolean`
 
 Checks if value is null
 
@@ -14,7 +14,7 @@ The value to check
 
 ## Returns
 
-`void`
+`boolean`
 
 - Returns true if value is null, else false
 

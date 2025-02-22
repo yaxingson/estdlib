@@ -19,4 +19,6 @@
  *
  * ```
  */
-export default function isError(value: unknown) {}
+export default function isError(value: unknown) {
+  return Object.prototype.toString.call(value) === '[object Error]'
+}

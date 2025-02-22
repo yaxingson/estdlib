@@ -7,16 +7,14 @@ import tsdoc from 'eslint-plugin-tsdoc'
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {
-    files: ['**/*.{js,ts}']
-  },
-  {
-    ignores: ['coverage', 'dist', 'docs', 'node_modules']
-  },
-  {
+    files: ['**/*.{js,ts}'],
+    ignores: ['coverage', 'dist', 'docs', 'node_modules'],
     languageOptions: {
       globals: {
         ...globals.browser,
-        ...globals.node
+        ...globals.node,
+        ...globals.es2015,
+        ...globals['shared-node-browser']
       },
       parser: tseslint.parser,
       parserOptions: {}

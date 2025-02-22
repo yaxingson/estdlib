@@ -4,6 +4,10 @@
 
 ## Index
 
+### Type Aliases
+
+- [TemplateSetting](../wiki/utility.TypeAlias.TemplateSetting)
+
 ### Functions
 
 - [now](../wiki/utility.Function.now)

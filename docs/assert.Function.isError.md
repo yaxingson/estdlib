@@ -2,7 +2,7 @@
 
 # Function: isError()
 
-> **isError**(`value`): `void`
+> **isError**(`value`): `boolean`
 
 Checks if value is an Error, EvalError, RangeError, ReferenceError,
 SyntaxError, TypeError, or URIError object
@@ -15,7 +15,7 @@ The value to check
 
 ## Returns
 
-`void`
+`boolean`
 
 - Returns true if value is an error object, else false
 

@@ -4,20 +4,35 @@
 
 > **add**(`augend`, `addend`): `number`
 
-add function
+Adds two numbers
 
 ## Parameters
 
 • **augend**: `number`
 
-first value
+The first number in an addition
 
 • **addend**: `number`
 
-second value
+The second number in an addition
 
 ## Returns
 
 `number`
 
-sum of two numbers
+Returns the total
+
+## Since
+
+0.1.2
+
+## See
+
+[source](https://github.com/yaxingson/estdlib/blob/main/lib/math/add.ts)
+
+## Example
+
+```js
+add(6, 4) // => 10
+
+```

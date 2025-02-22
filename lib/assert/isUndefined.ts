@@ -16,4 +16,6 @@
  *
  * ```
  */
-export default function isUndefined(value: unknown) {}
+export default function isUndefined(value: unknown) {
+  return value === void 0
+}

@@ -2,7 +2,7 @@
 
 # Function: first()
 
-> **first**(`array`): `unknown`
+> **first**(`array`): `void`
 
 Gets the first element of array
 
@@ -14,7 +14,7 @@ The array to query
 
 ## Returns
 
-`unknown`
+`void`
 
 - Returns the first element of array
 
