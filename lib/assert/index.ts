@@ -1,8 +1,0 @@
-export { default as isArray } from './isArray'
-export { default as isDate } from './isDate'
-export { default as isBoolean } from './isBoolean'
-export { default as isBuffer } from './isBuffer'
-export { default as isError } from './isError'
-export { default as isNaN } from './isNaN'
-export { default as isNull } from './isNull'
-export { default as isUndefined } from './isUndefined'

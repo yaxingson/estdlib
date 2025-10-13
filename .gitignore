@@ -1,7 +1,1 @@
-*.log
-*.idea
-*.swp
-coverage
-dist
-play
 node_modules
