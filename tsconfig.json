@@ -1,5 +1,8 @@
 {
   "compilerOptions":{
-    "types":["vitest/globals"]
+    "target":"es2015",
+    "module":"es2015",
+    "types":["vitest/globals"],
+    "moduleResolution":"bundler"
   }
 }
