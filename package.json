@@ -2,11 +2,53 @@
   "name": "estdlib",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "type":"module",
   "scripts": {
-    "build": "rimraf dist && tsup"
+    "build": "rimraf dist && tsup",
+    "build:docs":"typedoc"
   },
-  "exports": {},
+  "publishConfig":{
+    "main":"",
+    "module":"",
+    "browser":"",
+    "types":"",
+    "exports":{
+      ".":{
+
+      },
+      "./array":{
+
+      },
+      "./assert":{
+
+      },
+      "./async":{
+
+      },
+      "./date":{
+
+      },
+      "./error":{
+
+      },
+      "./function":{
+
+      },
+      "./math":{
+
+      },
+      "./object":{
+
+      },
+      "./string":{
+
+      },
+      "./utility":{
+
+      }
+    }
+  },
+  "files":[],
   "keywords": [],
   "author": "yaxingson <3228891558@qq.com>",
   "license": "MIT",
