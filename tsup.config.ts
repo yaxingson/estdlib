@@ -15,7 +15,7 @@ export default defineConfig(async () => {
       entry:['src/index.ts'],    
       format:['iife', 'cjs', 'esm'],
       globalName:'_',
-      dts:true,
+      dts:true
     },
     {
       entry:['src/index.ts'],

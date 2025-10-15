@@ -5,11 +5,13 @@
   "type": "module",
   "scripts": {
     "build": "rimraf dist && tsup",
-    "build:docs": "rimraf docs && typedoc"
+    "build:docs": "rimraf docs && typedoc",
+    "test": "vitest",
+    "bench": "vitest bench"
   },
-  "exports":{
-    ".":"./src/index.ts",
-    "./array":"./src/array/index.ts"
+  "exports": {
+    ".": "./src/index.ts",
+    "./array": "./src/array/index.ts"
   },
   "publishConfig": {
     "main": "./dist/index.js",
@@ -18,125 +20,130 @@
     "types": "./dist/index.d.ts",
     "exports": {
       ".": {
-        "import":{
-          "types":"./dist/index.d.ts",
-          "default":"./dist/index.mjs"
+        "import": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/index.mjs"
         },
-        "require":{
-          "types":"./dist/index.d.cts",
-          "default":"./dist/index.js"
+        "require": {
+          "types": "./dist/index.d.cts",
+          "default": "./dist/index.js"
         }
       },
       "./array": {
-        "import":{
-          "types":"./dist/array/index.d.ts",
-          "default":"./dist/array/index.mjs"
+        "import": {
+          "types": "./dist/array/index.d.ts",
+          "default": "./dist/array/index.mjs"
         },
-        "require":{
-          "types":"./dist/array/index.d.cts",
-          "default":"./dist/array/index.js"
+        "require": {
+          "types": "./dist/array/index.d.cts",
+          "default": "./dist/array/index.js"
         }
       },
       "./assert": {
-        "import":{
-          "types":"./dist/assert/index.d.ts",
-          "default":"./dist/assert/index.mjs"
+        "import": {
+          "types": "./dist/assert/index.d.ts",
+          "default": "./dist/assert/index.mjs"
         },
-        "require":{
-          "types":"./dist/assert/index.d.cts",
-          "default":"./dist/assert/index.js"
+        "require": {
+          "types": "./dist/assert/index.d.cts",
+          "default": "./dist/assert/index.js"
         }
       },
       "./async": {
-        "import":{
-          "types":"./dist/async/index.d.ts",
-          "default":"./dist/async/index.mjs"
+        "import": {
+          "types": "./dist/async/index.d.ts",
+          "default": "./dist/async/index.mjs"
         },
-        "require":{
-          "types":"./dist/async/index.d.cts",
-          "default":"./dist/async/index.js"
+        "require": {
+          "types": "./dist/async/index.d.cts",
+          "default": "./dist/async/index.js"
         }
       },
       "./date": {
-        "import":{
-          "types":"./dist/date/index.d.ts",
-          "default":"./dist/date/index.mjs"
+        "import": {
+          "types": "./dist/date/index.d.ts",
+          "default": "./dist/date/index.mjs"
         },
-        "require":{
-          "types":"./dist/date/index.d.cts",
-          "default":"./dist/date/index.js"
+        "require": {
+          "types": "./dist/date/index.d.cts",
+          "default": "./dist/date/index.js"
         }
       },
       "./error": {
-        "import":{
-          "types":"./dist/error/index.d.ts",
-          "default":"./dist/error/index.mjs"
+        "import": {
+          "types": "./dist/error/index.d.ts",
+          "default": "./dist/error/index.mjs"
         },
-        "require":{
-          "types":"./dist/error/index.d.cts",
-          "default":"./dist/error/index.js"
+        "require": {
+          "types": "./dist/error/index.d.cts",
+          "default": "./dist/error/index.js"
         }
       },
       "./function": {
-        "import":{
-          "types":"./dist/function/index.d.ts",
-          "default":"./dist/function/index.mjs"
+        "import": {
+          "types": "./dist/function/index.d.ts",
+          "default": "./dist/function/index.mjs"
         },
-        "require":{
-          "types":"./dist/function/index.d.cts",
-          "default":"./dist/function/index.js"
+        "require": {
+          "types": "./dist/function/index.d.cts",
+          "default": "./dist/function/index.js"
         }
       },
       "./math": {
-        "import":{
-          "types":"./dist/math/index.d.ts",
-          "default":"./dist/math/index.mjs"
+        "import": {
+          "types": "./dist/math/index.d.ts",
+          "default": "./dist/math/index.mjs"
         },
-        "require":{
-          "types":"./dist/math/index.d.cts",
-          "default":"./dist/math/index.js"
+        "require": {
+          "types": "./dist/math/index.d.cts",
+          "default": "./dist/math/index.js"
         }
       },
       "./object": {
-        "import":{
-          "types":"./dist/object/index.d.ts",
-          "default":"./dist/object/index.mjs"
+        "import": {
+          "types": "./dist/object/index.d.ts",
+          "default": "./dist/object/index.mjs"
         },
-        "require":{
-          "types":"./dist/object/index.d.cts",
-          "default":"./dist/object/index.js"
+        "require": {
+          "types": "./dist/object/index.d.cts",
+          "default": "./dist/object/index.js"
         }
       },
       "./string": {
-        "import":{
-          "types":"./dist/string/index.d.ts",
-          "default":"./dist/string/index.mjs"
+        "import": {
+          "types": "./dist/string/index.d.ts",
+          "default": "./dist/string/index.mjs"
         },
-        "require":{
-          "types":"./dist/string/index.d.cts",
-          "default":"./dist/string/index.js"
+        "require": {
+          "types": "./dist/string/index.d.cts",
+          "default": "./dist/string/index.js"
         }
       },
       "./utility": {
-        "import":{
-          "types":"./dist/utility/index.d.ts",
-          "default":"./dist/utility/index.mjs"
+        "import": {
+          "types": "./dist/utility/index.d.ts",
+          "default": "./dist/utility/index.mjs"
         },
-        "require":{
-          "types":"./dist/utility/index.d.cts",
-          "default":"./dist/utility/index.js"
+        "require": {
+          "types": "./dist/utility/index.d.cts",
+          "default": "./dist/utility/index.js"
         }
       }
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "keywords": [],
   "author": "yaxingson <3228891558@qq.com>",
   "license": "MIT",
   "packageManager": "pnpm@10.14.0",
   "devDependencies": {
     "@swc/core": "^1.13.5",
+    "@types/lodash": "^4.17.20",
     "@types/node": "^24.7.2",
+    "@types/underscore": "^1.13.0",
+    "@vitest/ui": "3.2.4",
     "eslint": "^9.37.0",
     "prettier": "^3.6.2",
     "rimraf": "^6.0.1",
@@ -144,5 +151,9 @@
     "typedoc": "^0.28.14",
     "typescript": "^5.9.3",
     "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "underscore": "^1.13.7"
   }
 }
