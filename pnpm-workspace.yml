@@ -1,4 +1,4 @@
 packages:
   - play
+  - benchmarks
   - bundle-size
-
