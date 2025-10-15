@@ -7,26 +7,129 @@
     "build": "rimraf dist && tsup",
     "build:docs": "rimraf docs && typedoc"
   },
+  "exports":{
+    ".":"./src/index.ts",
+    "./array":"./src/array/index.ts"
+  },
   "publishConfig": {
-    "main": "",
-    "module": "",
-    "browser": "",
-    "types": "",
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "browser": "./dist/index.global.js",
+    "types": "./dist/index.d.ts",
     "exports": {
-      ".": {},
-      "./array": {},
-      "./assert": {},
-      "./async": {},
-      "./date": {},
-      "./error": {},
-      "./function": {},
-      "./math": {},
-      "./object": {},
-      "./string": {},
-      "./utility": {}
+      ".": {
+        "import":{
+          "types":"./dist/index.d.ts",
+          "default":"./dist/index.mjs"
+        },
+        "require":{
+          "types":"./dist/index.d.cts",
+          "default":"./dist/index.js"
+        }
+      },
+      "./array": {
+        "import":{
+          "types":"./dist/array/index.d.ts",
+          "default":"./dist/array/index.mjs"
+        },
+        "require":{
+          "types":"./dist/array/index.d.cts",
+          "default":"./dist/array/index.js"
+        }
+      },
+      "./assert": {
+        "import":{
+          "types":"./dist/assert/index.d.ts",
+          "default":"./dist/assert/index.mjs"
+        },
+        "require":{
+          "types":"./dist/assert/index.d.cts",
+          "default":"./dist/assert/index.js"
+        }
+      },
+      "./async": {
+        "import":{
+          "types":"./dist/async/index.d.ts",
+          "default":"./dist/async/index.mjs"
+        },
+        "require":{
+          "types":"./dist/async/index.d.cts",
+          "default":"./dist/async/index.js"
+        }
+      },
+      "./date": {
+        "import":{
+          "types":"./dist/date/index.d.ts",
+          "default":"./dist/date/index.mjs"
+        },
+        "require":{
+          "types":"./dist/date/index.d.cts",
+          "default":"./dist/date/index.js"
+        }
+      },
+      "./error": {
+        "import":{
+          "types":"./dist/error/index.d.ts",
+          "default":"./dist/error/index.mjs"
+        },
+        "require":{
+          "types":"./dist/error/index.d.cts",
+          "default":"./dist/error/index.js"
+        }
+      },
+      "./function": {
+        "import":{
+          "types":"./dist/function/index.d.ts",
+          "default":"./dist/function/index.mjs"
+        },
+        "require":{
+          "types":"./dist/function/index.d.cts",
+          "default":"./dist/function/index.js"
+        }
+      },
+      "./math": {
+        "import":{
+          "types":"./dist/math/index.d.ts",
+          "default":"./dist/math/index.mjs"
+        },
+        "require":{
+          "types":"./dist/math/index.d.cts",
+          "default":"./dist/math/index.js"
+        }
+      },
+      "./object": {
+        "import":{
+          "types":"./dist/object/index.d.ts",
+          "default":"./dist/object/index.mjs"
+        },
+        "require":{
+          "types":"./dist/object/index.d.cts",
+          "default":"./dist/object/index.js"
+        }
+      },
+      "./string": {
+        "import":{
+          "types":"./dist/string/index.d.ts",
+          "default":"./dist/string/index.mjs"
+        },
+        "require":{
+          "types":"./dist/string/index.d.cts",
+          "default":"./dist/string/index.js"
+        }
+      },
+      "./utility": {
+        "import":{
+          "types":"./dist/utility/index.d.ts",
+          "default":"./dist/utility/index.mjs"
+        },
+        "require":{
+          "types":"./dist/utility/index.d.cts",
+          "default":"./dist/utility/index.js"
+        }
+      }
     }
   },
-  "files": [],
+  "files": ["dist"],
   "keywords": [],
   "author": "yaxingson <3228891558@qq.com>",
   "license": "MIT",

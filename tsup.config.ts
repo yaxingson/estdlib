@@ -7,14 +7,29 @@ const srcDir = join(__dirname, 'src')
 
 export default defineConfig(async () => {
   const dirs = await readdir(srcDir)
-  const entry = dirs.map(dir => statSync(join(srcDir, dir)).isFile() 
-    ? `src/${dir}` 
-    : `src/${dir}/index.ts`
-  )
+  const entry = dirs.filter(dir => statSync(join(srcDir, dir)).isDirectory())
+    .map(dir=>`src/${dir}/index.ts`)
 
-  return {
-    entry,    
-    format:['iife', 'cjs', 'esm'],
-    globalName:'sak',
-  }
+  return [
+    {
+      entry:['src/index.ts'],    
+      format:['iife', 'cjs', 'esm'],
+      globalName:'_',
+      dts:true,
+    },
+    {
+      entry:['src/index.ts'],
+      format:['iife'],
+      globalName:'_',
+      minify:true,
+      outExtension() {
+        return {js:'.global.min.js'}
+      },
+    },
+    {
+      entry,
+      format:['cjs', 'esm'],
+      dts:true
+    }
+  ]
 })
